@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 export default function App() {
 
   const [param, setParam] = useState('')
-  const [text, setText] = useState([])
+  const [text, setText] = useState([{input: "hello world"}])
 
   const Handler = () => {
     fetch(`http://localhost:5000/${param}`)
@@ -19,11 +19,11 @@ export default function App() {
 
   return (
     <>
-      <h1>{text}</h1>
+      {/* <h1>{text[text.length-1].input}</h1> */}
       <ul>
-      {text !== [] && text.map((item, index) => {
+      {text && text.map((item, index) => {
         return (
-        <li key={index}>{item.input}</li>
+        <li key={index}>{'test: ' + item.input}</li>
         )
       })}
         </ul>

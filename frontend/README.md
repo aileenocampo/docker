@@ -4,6 +4,18 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+In the project directory, run
+to start run:
+### `docker-compoose up`
+
+to end run: 
+### `docker-compose down --rmi all`
+or if you can use
+### `docker-compose down`
+docker-compose down will keep the images so those would have to be manually deleted
+to rebuild with old images still present (assuming changes were made) run:
+### `docker-compose up --build`
+
 In the project directory, you can run:
 
 ### `npm start`
